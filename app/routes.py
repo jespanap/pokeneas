@@ -89,6 +89,17 @@ pokeneas = [
     },
 ]
 
+@pokenea_bp.route("/")
+def home():
+    return """
+    <h1>Bienvenido a Pokeneas</h1>
+    <p>Puedes visitar las siguientes rutas:</p>
+    <ul>
+        <li><a href="http://3.134.84.75/pokenea_img">Ver Pokenea con imagen</a></li>
+        <li><a href="http://3.134.84.75/pokenea_json">Ver Pokenea en JSON</a></li>
+    </ul>
+    """
+
 @pokenea_bp.route("/pokenea_json")
 def get_pokenea_json():
     pokenea = random.choice(pokeneas)
