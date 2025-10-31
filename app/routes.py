@@ -89,7 +89,6 @@ pokeneas = [
     },
 ]
 
-
 @pokenea_bp.route("/pokenea_json")
 def get_pokenea_json():
     pokenea = random.choice(pokeneas)
